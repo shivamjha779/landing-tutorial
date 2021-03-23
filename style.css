@@ -46,19 +46,99 @@ nav {
   justify-content: flex-end;
 }
 .presentation {
-    display: flex;
-    margin: auto;
-    width: 90%;
-    align-items: center;
-    min-height: 80vh;
+  display: flex;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+  min-height: 80vh;
 }
 .introduction {
-    flex: 1;
-    background: chocolate;
+  flex: 1;
+  background: chocolate;
 }
 .cover {
-    background: cyan;
+  background: cyan;
 }
 .cover img {
-    height: 60vh;
+  height: 60vh;
+  animation: drop 1.5s ease;
+}
+.intro-text {
+  font-weight: 500;
+  font-size: 20px;
+  background: linear-gradient(to right, #494984, #f5f5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.cta {
+  padding: 50px 0px 0px 0px;
+}
+.cta-salect {
+  border: solid 4px #494984;
+  color: rgb(235, 236, 229);
+  background: transparent;
+  height: 50px;
+  width: 150px;
+  font-size: medium;
+  cursor: pointer;
+}
+.cta-add {
+  border: 5px solid #a95de7;
+  height: 50px;
+  width: 150px;
+  background: pink;
+  color: teal;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 30px 0px 0px 20px;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.5;
+  height: 90%;
+}
+.mid-circle {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  left: 40px;
+  z-index: -1;
+}
+.small-circle {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  right: 60px;
+  z-index: -1;
+}
+.laptop-salect {
+  display: flex;
+  position: absolute;
+  width: 20%;
+  justify-content: space-around;
+  right: 16%;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 1024px) {
+    .presentation {
+        flex-direction: column;
+    }
 }
